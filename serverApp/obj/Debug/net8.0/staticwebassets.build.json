@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "Hash": "ZCAjAUmij837h1sg5LLOC/TPiLWgo9TvvqK0mFgQZ8Q=",
+  "Source": "FullstackApp1",
+  "BasePath": "_content/FullstackApp1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "FullstackApp1/wwwroot",
+      "Source": "FullstackApp1",
+      "ContentRoot": "/home/timur/Desktop/repositories/NotesFullStackProj/serverApp/wwwroot/",
+      "BasePath": "_content/FullstackApp1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/timur/Desktop/repositories/NotesFullStackProj/serverApp/wwwroot/favicon.ico",
+      "SourceId": "FullstackApp1",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/timur/Desktop/repositories/NotesFullStackProj/serverApp/wwwroot/",
+      "BasePath": "_content/FullstackApp1",
+      "RelativePath": "favicon#[.{fingerprint}]?.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "chdipq9vsu",
+      "Integrity": "wMUXdn9jeM9pIB8FCM9Y2kRUS03Ds2tl+N1MJVHdENQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/home/timur/Desktop/repositories/NotesFullStackProj/serverApp/wwwroot/favicon.jpg",
+      "SourceId": "FullstackApp1",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/timur/Desktop/repositories/NotesFullStackProj/serverApp/wwwroot/",
+      "BasePath": "_content/FullstackApp1",
+      "RelativePath": "favicon#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "devtb79sx5",
+      "Integrity": "y8T6wXi1bPvEsN102lxsv4g7n129KV3g7KCyLo/ejzQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/favicon.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "favicon.chdipq9vsu.ico",
+      "AssetFile": "/home/timur/Desktop/repositories/NotesFullStackProj/serverApp/wwwroot/favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "270398"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wMUXdn9jeM9pIB8FCM9Y2kRUS03Ds2tl+N1MJVHdENQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 Aug 2024 19:59:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "chdipq9vsu"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wMUXdn9jeM9pIB8FCM9Y2kRUS03Ds2tl+N1MJVHdENQ="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.devtb79sx5.jpg",
+      "AssetFile": "/home/timur/Desktop/repositories/NotesFullStackProj/serverApp/wwwroot/favicon.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "53713"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y8T6wXi1bPvEsN102lxsv4g7n129KV3g7KCyLo/ejzQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 Aug 2024 19:59:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "devtb79sx5"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-y8T6wXi1bPvEsN102lxsv4g7n129KV3g7KCyLo/ejzQ="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "/home/timur/Desktop/repositories/NotesFullStackProj/serverApp/wwwroot/favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "270398"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wMUXdn9jeM9pIB8FCM9Y2kRUS03Ds2tl+N1MJVHdENQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 Aug 2024 19:59:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wMUXdn9jeM9pIB8FCM9Y2kRUS03Ds2tl+N1MJVHdENQ="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.jpg",
+      "AssetFile": "/home/timur/Desktop/repositories/NotesFullStackProj/serverApp/wwwroot/favicon.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "53713"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y8T6wXi1bPvEsN102lxsv4g7n129KV3g7KCyLo/ejzQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 Aug 2024 19:59:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-y8T6wXi1bPvEsN102lxsv4g7n129KV3g7KCyLo/ejzQ="
+        }
+      ]
+    }
+  ]
+}
