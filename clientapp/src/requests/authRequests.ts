@@ -12,7 +12,6 @@ import ITokens from "../interfaces/ITokens";
 export async function accountCreate(
   dto: IUserRegistrationDto
 ): Promise<AxiosResponse<IAccountCreateResponse>> {
-  //КОроче, форму чтобы отправить нужно ее в качетсве 2 парр а не писать в {data}
   return api
     .post<IAccountCreateResponse>("/accountcreate", objectToFormConverter(dto))
     .then();

@@ -1,7 +1,9 @@
 using System.ComponentModel.DataAnnotations;
-using System.Security.Principal;
+using FullstackApp1.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+
+namespace FullstackApp1.Controllers;
 
 [ApiController]
 [Route("/api/notes")]
@@ -45,16 +47,16 @@ public class NoteController : ControllerBase
         }
 
         selectedNotes =
-         sortType == "date"
-         ? selectedNotes.OrderBy((n) => n.TimeOfCreation).ToList()
-         : selectedNotes.OrderByDescending((n) => n.TimeOfCreation).ToList();
+            sortType == "date"
+                ? selectedNotes.OrderBy((n) => n.TimeOfCreation).ToList()
+                : selectedNotes.OrderByDescending((n) => n.TimeOfCreation).ToList();
 
         var totalCount = selectedNotes.Count;
 
         selectedNotes = selectedNotes
-           .Skip(from)
-           .Take(to - from)
-           .ToList();
+            .Skip(from)
+            .Take(to - from)
+            .ToList();
 
         //Блять!!! Сервак отправляет как оказалось headers с ниж регистром, удобно, но блять, не знал, ну ок
         //CORS включи если нужны кастомные хедеры отправлять

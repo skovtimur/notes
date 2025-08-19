@@ -1,4 +1,5 @@
-using System.Data;
+using FullstackApp1.Extensions;
+using FullstackApp1.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -18,7 +19,7 @@ builder.Services.AddHealthChecks()
 
 builder.Services.AddStackExchangeRedisCache((opts) =>
 {
-    string connectionStr = builder.Configuration["UserSecrets:RedisConnectionStr"];
+    var connectionStr = builder.Configuration["UserSecrets:RedisConnectionStr"];
 
     if (string.IsNullOrEmpty(connectionStr))
         throw new ArgumentNullException("Redis connection string is empty");
@@ -129,10 +130,7 @@ builder.Services.AddScoped<IEmailVerify, EmailVerifyService>();
 
 var app = builder.Build();
 
-app.UseFavicon();//Этот мидлвеер нужен чтобы можно было спокойно открывать сайт в браузере, у меня свагер перестал показывать картинку(хз почему), потому браузер(Brave) пишет 400.
-// ольшая часть браузеров требуют картинки для сайтов, ну а какаая картиинка может быть у апи? Ну и вот зачем этот мидлвеер
-// Я даун, взял AllowedHosts(appSettings.Development.json) изменил на "localhost:4505" когда там просили хосты(домены) без портов
-//Ихменил на localhost, теперь этот мидрвеер не нужен, но пусть будет, на память о том как я проебал часов 4-6 на решение тупой проблемы.
+app.UseFavicon();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

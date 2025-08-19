@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 
+namespace FullstackApp1.Controllers;
+
 [ApiController, Route("/api")]
 public class LoginController : ControllerBase
 {
@@ -68,7 +70,7 @@ public class LoginController : ControllerBase
     {
         var existingUser = (await _userService.GetUsersByEmail(dto.Email))
             .FirstOrDefault(x => x.EmailVerify
-            || _hashVerify.Verify(dto.Password, x.PasswordHash));
+                                 || _hashVerify.Verify(dto.Password, x.PasswordHash));
         //Зачем я беру юзера у которого есть подверждение или такой же пороль?
         //Чтобы хитрый школотрон не смог поломать мне все нахуй
         //Дело в том что AccountCreate ДО мог создать аккаунты с одинаковыми почтами и поролями, тк они было не подтверждены, потому добавил _hashVerify.Verify

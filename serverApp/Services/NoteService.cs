@@ -1,8 +1,11 @@
 using Dapper;
+
+namespace FullstackApp1.Services;
+
 public class NoteService
 {
     public NoteService(ConnectionFactory factory,
-     QueryCreaterService queryCreater, ILogger<NoteService> logger)
+        QueryCreaterService queryCreater, ILogger<NoteService> logger)
     {
         _factory = factory;
         _queryCreater = queryCreater;
@@ -20,7 +23,7 @@ public class NoteService
         return await dbCon
             .ExecuteAsync(
                 _queryCreater.AddQuery(queryPattern.Item1, queryPattern.Item2),
-            ParamsForAddOrUpdateQuery(note)) >= 0;
+                ParamsForAddOrUpdateQuery(note)) >= 0;
     }
 
 
@@ -34,6 +37,7 @@ public class NoteService
     {
         return (await GetNotes("id", guid.ToString())).FirstOrDefault();
     }
+    
     public async Task<IEnumerable<NoteEntity>> GetNotes(string filterBy, string value)
     {
         using var dbCon = _factory.Create();
@@ -50,10 +54,10 @@ public class NoteService
         _logger.LogDebug(sqlQuery);
 
         return await dbCon.QueryAsync<NoteEntity>(sqlQuery,
-        new
-        {
-            valueParam = value
-        });
+            new
+            {
+                valueParam = value
+            });
     }
 
 
@@ -64,7 +68,7 @@ public class NoteService
         using var dbCon = _factory.Create();
 
         var sqlQuery = "UPDATE notes SET name = @newNameParam, Description = @newDesParam" +
-            " WHERE id = @guidStringParam";
+                       " WHERE id = @guidStringParam";
 
         _logger.LogDebug(sqlQuery);
 

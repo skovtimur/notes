@@ -1,5 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
+namespace FullstackApp1.Model.Entityes;
+
 public class RefreshToken
 {
     [Required]
