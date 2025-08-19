@@ -19,7 +19,6 @@ export default function NoteChangeModalWindow({
   const refToDescription = useRef<HTMLTextAreaElement>(null);
 
   const [nameIsValid, setNameIsValid] = useState(true);
-  //Тру по дефолту тк в отличие в  NoteCreate по дефолту у итпутов есть уже значения, тут же просто меняет юзер уже существующие значения
 
   async function onChange() {
     const result = await noteUpdate({

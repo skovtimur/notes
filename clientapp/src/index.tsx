@@ -24,7 +24,6 @@ api.interceptors.request.use((conf) => {
   return conf;
 });
 
-//Первый парр если запрос успешный, второй если нет:
 api.interceptors.response.use(
   (conf) => {
     return conf;
@@ -38,7 +37,7 @@ api.interceptors.response.use(
       !error.config._isRetry
     ) {
       try {
-        originalReq._isRetry = true; //Нужно isRetry проверка чтобы не сделать бесконечный цикл где хочешь избавиться от 401 но в итоге опять его получаешь(если сервак писал даун)
+        originalReq._isRetry = true;
         const refresh = Cookies.get(refreshTokenInCookies);
         const response = await api
           .put<ITokens>("/tokensupdate", {

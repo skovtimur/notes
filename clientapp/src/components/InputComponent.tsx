@@ -1,10 +1,6 @@
 import { useState, forwardRef } from "react";
 import IInputComponentParams from "../interfaces/parametrs/IInputComponentParams";
 import "../styles/index.css";
-//forwardRef это компонент с ref атрибутом, почему нельзя за пределами одного компонента передать в другой ref из первого? Да хуй его знает, под копотом хуйня 100%
-//Ну и вот, forwardRef позволяет сзодать ссылку в первом комп и юзать ее в втором комп.
-//Стоит заметить, ебанный typescript выебываеться, потому при создании ссылки у нее в джинериках должен быьть тип HTMLElement-а, в какой тип элемента ссылаться
-//Вобще это можно было сделать и с помощью useState, но мне просто стало интересно хули реакт не может работать с ref за пределами компонента.
 export const InputComponent = forwardRef<
   HTMLInputElement,
   IInputComponentParams

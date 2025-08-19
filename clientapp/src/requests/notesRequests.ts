@@ -22,7 +22,6 @@ export async function noteGet(id: string): Promise<AxiosResponse<Note>> {
   return api.get<Note>(`/notes/${id}`).then();
 }
 
-//Ебн html5 не позволяет отправлять header-ы в форме, пиздец нахуй!!! ПОтому FormData вместо формы.
 export async function noteCreate(note: INoteDto): Promise<AxiosResponse<void>> {
   return api.post(`/notes/`, objectToFormConverter(note)).then();
 }
